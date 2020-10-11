@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <p><h1><b>College Form Registration</b></h1></p>
+
+        <div class="container">
+            <form>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">First Name *</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" placeholder="Your name.." onblur="checkForAlphabets(fname)"  required> 
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Last Name *</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name.." onblur="checkForAlphabets(lname)" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="age">Date of Birth * </label>
+                </div>
+                <div class="col-75">
+                  <input type="date" id="birthday" name="birthday" onchange="validateDate(birthday)"  required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="emailid">Email Id *</label>
+                </div>
+                <div class="col-75">
+                  <input type="email" id="emailid" name="emailid" placeholder="Enter valid email address" required><br><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="phoneno">Phone Number*</label>
+                </div>
+                <div class="col-75">
+                  <input type="tel" id="phoneno" name="phoneno" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" onblur="checkForNumbers(phoneno)" required><br><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="address">Address *</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="add" name="address" placeholder="Address line 1" required>
+                  <input type="text" id="add" name="address" placeholder="City" required>
+                  <select id="province" name="province" required>
+                    <option selected="selected">--select your province--</option>
+                    <option value="ON">ON</option>
+                    <option value="NS">NS</option>
+                    <option value="BC">BC</option>
+                    <option value="MB">MB</option>
+                    <option value="SK">SK</option>
+                    <option value="AB">AB</option>
+                    <option value="NT">NT</option>
+                    <option value="QC">QC</option>
+                  </select><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="zipcode">Zip Code *</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="zipcode" name="zipcode" placeholder="eg: P7A 5E4" minlength="5" required><br>
+                </div>
+              </div>       
+            </form>
+          </div>  
+    </body>
+</html>
