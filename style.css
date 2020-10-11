@@ -2,7 +2,23 @@
     box-sizing: border-box;
   }
   
+  input[type=text], input[type=date], input[type=email], input[type=number], input[type=password], input[type=tel], select {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
   
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  #expCheck {
+    display: none;
+  }
+
   input[type=submit] {
     background-color: #4CAF50;
     color: white;
@@ -24,5 +40,23 @@
     padding: 20px;
   }
 
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
   
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
   
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ 

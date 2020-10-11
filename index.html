@@ -85,7 +85,96 @@
                 <div class="col-75">
                   <input type="text" id="zipcode" name="zipcode" placeholder="eg: P7A 5E4" minlength="5" required><br>
                 </div>
-              </div>       
+              </div> 
+              
+              <div class="row">
+                <div class="col-25">
+                  <label for="country">Country *</label>
+                </div>
+                <div class="col-75">
+                  <select id="country" name="country" required>
+                    <option selected="selected">--select your country--</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="IN">India</option>
+                  </select><br><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="Mname">Mother's Maiden Name *</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="mname" name="mname" onblur="checkForAlphabets(mname)"  required><br><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="experience"> Do you have any experience?</label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" name="exp" id="yes" value="yes" onchange="checkExp(this.value)">
+                    <label for="yes">Yes</label>
+                    <input type="radio"  name="exp" id="no" value="no" onchange="checkExp(this.value)">
+                    <label for="no">No</label><br>
+                </div>
+              </div>
+
+              <div id="expCheck">
+              <div class="row">
+                <div class="col-25">
+                  <label for="cname">Company Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="cname" name="cname" placeholder="Company Name"><br>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="yexp">Years of experience</label>
+                </div>
+                <div class="col-75">
+                  <input type="number" id="yexp" name="yexp"><br><br>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                  <label for="degree">Highest Level of Degree</label>
+                </div>
+                <div class="col-75">
+                  <select id="degree" name="Degree">
+                    <option selected="selected">none</option>
+                    <option value="bachelors">Bachelor's Degree</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="Masters">Master's Degree</option>
+                    <option value="PGCertificate">Post Graduation Certificate</option>
+                    <option value="Certificate">Certificate</option>
+                  </select><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="ygrad">Year of Graduation</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="ygrad" name="ygrad"><br>
+                </div>
+              </div>
+
+            <div class="row">
+                <div class="col-25">
+                  <label for="cgpa">Cumulative Grade</label>
+                </div>
+                <div class="col-75">
+                  <input type="number" id="cgpa" name="cgpa"><br><br>
+                </div>
+              </div>
             </form>
           </div>  
     </body>
