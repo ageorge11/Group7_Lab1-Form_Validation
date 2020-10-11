@@ -1,3 +1,14 @@
+function checkExp(jobvalue) {
+
+    if(jobvalue != "yes")
+    {
+        document.getElementById("expCheck").style.display = "none";
+    }
+    else{
+        document.getElementById("expCheck").style.display = "block";
+    }
+}
+
 function checkForAlphabets(input) {
 
     var letters = /^[A-Za-z]+$/;
@@ -13,33 +24,6 @@ function checkForAlphabets(input) {
 
 }
 
-
-function checkForNumbers(input) {
-    var numbers =  /-[0-9]()+/;
-   if(input.value.match(numbers))
-     {
-      return true;
-     }
-   else
-     {
-     alert("enter numbers only");
-     }
-
-}
-
-//script to display company name and year of experience depending on the answer for experience
-function checkExp(jobvalue) {
-
-    if(jobvalue != "yes")
-    {
-        document.getElementById("expCheck").style.display = "none";
-    }
-    else{
-        document.getElementById("expCheck").style.display = "block";
-    }
-}
-
-//validation for date of birth
 function validateDate(dob) {
     
     var today = new Date();
@@ -60,7 +44,35 @@ function validateDate(dob) {
     }    
 }
 
-//validating the password entered as per the requirement
+function checkForNumbers(input) {
+    var numbers =  /-[0-9]()+/;
+   if(input.value.match(numbers))
+     {
+      return true;
+     }
+   else
+     {
+     alert("enter numbers only");
+     }
+
+}
+
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+function displayMessage()
+{
+    document.getElementById("message").style.display = "block";
+}
+
+function hideMessage()
+{
+    document.getElementById("message").style.display = "none";
+}
+
 function ValidatePassword(psw) {
     // Validate lowercase letters
   var lowerCaseLetters = /[a-z]/g;
@@ -102,7 +114,6 @@ function ValidatePassword(psw) {
   }
 }
 
-//validating the password re-entered
 function ValidateConfirmPassword()
 {
     if (document.getElementById('psw').value ==
@@ -116,7 +127,6 @@ function ValidateConfirmPassword()
 
 }
 
-//validating the format of file uploaded
 function Checkfiles()
     {
         var fileName = document.getElementById('fileid').value;
