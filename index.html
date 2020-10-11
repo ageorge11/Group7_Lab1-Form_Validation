@@ -175,6 +175,97 @@
                   <input type="number" id="cgpa" name="cgpa"><br><br>
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="sGrade">Grade in High school</label>
+                </div>
+                <div class="col-75">
+                  <input type="number" id="sGrade" name="sGrade"><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="sYear">High School Graduation Year</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="sYear" name="sYear"><br><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="interest">Area of Interest</label>
+                </div>
+                <div class="col-75">
+                    <select id="interest" name="interest">
+                      <option selected="selected">none</option>
+                      <option value="IT">Information Technology</option>
+                      <option value="Healthcare">Healthcare</option>
+                      <option value="Economics">Economics</option>
+                      <option value="Business">Business</option>
+                      <option value="Arts">Arts</option>
+                      <option value="Literature">Literature</option>
+                    </select><br><br>
+                  </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="uname">Enter a valid username for registration *</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="uname" name="uname" placeholder="username" required><br><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="psw">Enter a valid password *</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    onfocus="displayMessage()"  onblur="hideMessage()" onkeyup="ValidatePassword(psw)"  required><br><br>
+                </div>
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                  </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="rpass">Confirm Password *</label>
+                </div>
+                <div class="col-75">
+               <input type="password" id="rpass" name="rpass" placeholder="confirm password" onblur="ValidateConfirmPassword()" required><br><br>
+                </div>
+                <div id="cmessage"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="resume">Upload Resume and cover letter *</label>
+                </div>
+                <div class="col-75">
+                  <input type="file" id="fileid" name="resume" placeholder="resume" onblur="Checkfiles()"  required><br><br>
+                </div>
+              </div>
+
+              <div class="row">
+                  <input type="checkbox" required>
+                  <label>All the Information provided above are truthful and is best of my knowledge, any fault in given information can make myself the accused</label>
+              </div>
+
+              <br><br><div class="row">
+                <input type="submit" value="Submit">
+              </div>
+              
             </form>
           </div>  
     </body>
